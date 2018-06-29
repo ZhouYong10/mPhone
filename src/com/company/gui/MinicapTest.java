@@ -76,7 +76,6 @@ public class MinicapTest extends JFrame {
             }
         });
 
-
         mp.addMouseMotionListener(new MouseMotionListener() {
             @Override
             public void mouseDragged(MouseEvent e) {
@@ -94,9 +93,6 @@ public class MinicapTest extends JFrame {
             }
         });
 
-
-
-
         this.getContentPane().add(mp);
         this.setSize(width, height);
         Dimension dim = Toolkit.getDefaultToolkit().getScreenSize();
@@ -110,10 +106,7 @@ public class MinicapTest extends JFrame {
         });
         this.setVisible(true);
         pack();
-
     }
-
-
 
     private Point pointConvert(Point point)
     {

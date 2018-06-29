@@ -201,7 +201,7 @@ public class MiniCapUtil implements ScreenSubject {
 	private String executeShellCommand(String command) {
 		CollectingOutputReceiver output = new CollectingOutputReceiver();
 		try {
-			device.executeShellCommand(command, output, 0);
+			device.executeShellCommand(command, output);
 		} catch (TimeoutException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -346,7 +346,6 @@ public class MiniCapUtil implements ScreenSubject {
 
 	}
 
-
 	class TouchThread implements Runnable {
 		@Override
 		public void run() {
@@ -355,7 +354,6 @@ public class MiniCapUtil implements ScreenSubject {
 			executeShellCommand(startCmd);
 		}
 	}
-
 
 	class ImageConverter implements Runnable {
 		private int readBannerBytes = 0;
